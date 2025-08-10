@@ -12,13 +12,6 @@ const swaggerDocument = require('./swagger.json');
 require("dotenv").config();
 const port = process.env.PORT;
 
-console.log("===== ENV VARIABLES START =====");
-console.log(process.env.PORT);
-console.log("===== ENV VARIABLES END =====");
-
-console.log("MONGO_URL raw:", process.env.MONGO_URL);
-console.log("JWT_SECRET raw:", process.env.JWT_SECRET);
-
 
 const fileStorage = multer.diskStorage({
   destination: (req, file, cb) => {
@@ -65,9 +58,7 @@ app.use((error, req, res, next) => {
     res.status(status).json({ message: message });
   });
 DBConcction(() => {
-    app.listen(PORT, () => {
+    app.listen(8080, () => {
       console.log(`Server is running on port ${PORT}`);
-      console.log("Mongo URI:", process.env.MONGO_URI);
-      console.log("Port:", process.env.PORT);
     });
 })
