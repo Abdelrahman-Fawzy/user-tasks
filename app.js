@@ -17,7 +17,6 @@ console.log(process.env);
 console.log("===== ENV VARIABLES END =====");
 
 console.log("MONGO_URL raw:", process.env.MONGO_URL);
-console.log("Length:", process.env.MONGO_URL.length);
 console.log("JWT_SECRET raw:", process.env.JWT_SECRET);
 
 
