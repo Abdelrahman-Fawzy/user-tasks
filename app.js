@@ -56,5 +56,9 @@ app.use((error, req, res, next) => {
     res.status(status).json({ message: message });
   });
 DBConcction(() => {
-    app.listen(port)
+    app.listen(PORT, () => {
+      console.log(`Server is running on port ${PORT}`);
+      console.log("Mongo URI:", process.env.MONGO_URI);
+      console.log("Port:", process.env.PORT);
+    });
 })
