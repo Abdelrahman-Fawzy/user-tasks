@@ -11,6 +11,10 @@ const swaggerJsDoc = require("swagger-jsdoc");
 const swaggerDocument = require('./swagger.json');
 require("dotenv").config();
 const port = process.env.PORT;
+
+console.log("MONGO_URI from env:", process.env.MONGO_URI);
+console.log("PORT from env:", process.env.PORT);
+
 const fileStorage = multer.diskStorage({
   destination: (req, file, cb) => {
     cb(null, 'images');
