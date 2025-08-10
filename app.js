@@ -13,7 +13,7 @@ require("dotenv").config();
 const port = process.env.PORT;
 
 console.log("===== ENV VARIABLES START =====");
-console.log(process.env);
+console.log(process.env.PORT);
 console.log("===== ENV VARIABLES END =====");
 
 console.log("MONGO_URL raw:", process.env.MONGO_URL);
