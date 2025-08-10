@@ -12,8 +12,9 @@ const swaggerDocument = require('./swagger.json');
 require("dotenv").config();
 const port = process.env.PORT;
 
-console.log("MONGO_URI from env:", process.env.MONGO_URL);
+console.log("MONGO_URL from env:", process.env.MONGO_URL);
 console.log("PORT from env:", process.env.PORT);
+console.log("CUSTOM:", "mongodb+srv://abdelrahmanawzy98:abdo571998@cluster0.bpdihnt.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0");
 
 const fileStorage = multer.diskStorage({
   destination: (req, file, cb) => {
