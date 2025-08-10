@@ -58,7 +58,5 @@ app.use((error, req, res, next) => {
     res.status(status).json({ message: message });
   });
 DBConcction(() => {
-    app.listen(8080, () => {
-      console.log(`Server is running on port ${PORT}`);
-    });
+    app.listen(8080);
 })
